@@ -2,20 +2,72 @@
 <html lang="pt-br">
 <head>
 	<meta charset="UTF-8">
+	<!--FAVICON-->
+	<link rel = "icon" href="imagens/Pokeball.png">
 	<title>Home - html5 css3</title>
 	<!-- SEO IMPORTANTE -->
-<meta name = description content = "Aprenda html5 e css3 de forma simples e prática">
-<!-- a linha abaixo "garante" o layout responsivo nos diversos dispositivos mobile -->
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name = "description" content = "Aprenda html5 e css3 de forma simples e prática">
+	<!-- a linha abaixo "garante" o layout responsivo nos diversos dispositivos mobile -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-	<h1>PÃO</h1>
-	<P>
-		<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur reprehenderit error, expedita hic repellendus unde, quae sapiente. Asperiores, nesciunt quasi. Similique tempore, sunt ratione error quis fugiat, non quos dolor.</span>
-		<span>Alias, ipsa repudiandae sit at enim! Voluptas quia minima cupiditate officiis beatae provident nihil ipsum, voluptatem odio dolore placeat facilis sunt aliquid! Inventore libero explicabo reiciendis nihil ex, magni repellendus?</span>
-		<span>Reiciendis sit vero expedita, voluptatibus soluta ab commodi doloribus, ipsa, totam atque cupiditate recusandae magnam provident aspernatur consectetur culpa nisi nobis consequatur adipisci quasi excepturi dicta. Dignissimos possimus reprehenderit, nisi!</span>
+	<div id="main">
+		<!-- Cabeçalho-->
+		<header>
+			<!--ALT Serve para aumentar visibilidade do site, pois o google leva em consideração o ALT-->
+			<img src="imagens/logotipo.png" alt="html5 css3">
+		</header>
+		<!--MENU-->
+		<nav>
+			<ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="">Sobre</a></li>
+				<li><a href="">Conteúdo</a>
+					<ul>
+						<li><a href="#">HTML</a></li>
+						<li><a href="#">CSS</a></li>
+						<li><a href="#">JavaScript</a></li>
+					</ul>
+				</li>
+				<li><a href="#">Contato</a></li>
+			</ul>
+		</nav>
 
-	</P>
+		<!--Conteúdo-->
+		<section id ="banner">
+			<img src="imagens/1024pokemon.jpg" alt="Curso HTML5 Css3">
+			<h2>Pokemon</h2>
+		</section>
+
+		<section id="headling">
+			<h1>Aprenda HTML5 e CSS3 de forma símples e prática, desenvolvendo um site responsivo do "zero".</h1>
+		</section>
+
+		<section id="destaque">
+			<!--BLOCO 1 -->
+			<img src="imagens/pb.png" alt="Pokeball">
+			<h2>Destaque 1</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+			<a href="#">Botão 1</a>
+
+			<!--BLOCO 2 -->
+			<img src="imagens/ub.png" alt="Ultraball">
+			<h2>Destaque 2</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+			<a href="#">Botão 2</a>
+
+			<!--BLOCO 3 -->
+			<img src="imagens/mb.png" alt="Masterball">
+			<h2>Destaque 3</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+			<a href="#">Botão 3</a>
+		</section>
+		<!--RODAPÉ-->
+		<footer>
+			<p>©Copyright - Jhonson Clonson</p>
+		</footer>
+
+	</div>
 
 </body>
 </html>
