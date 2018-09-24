@@ -1,0 +1,33 @@
+/* 
+Folha de estilo principal do site html5+css3
+@author Me, Myself and I. 
+*/
+
+/*********** Importando font ***********/
+
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+/********** PRINCIPAL **********/
+
+body{
+	font-family: 'Open Sans', sans-serif;
+	background-color: #f20202;
+	font-size: 1em; /* 1 em = 16px */
+	background-image: url("../imagens/cogumelos.png");
+	background-attachment: fixed; /*fixa o background*/
+	/* background-size: cover; /*mantem o tamanha de forma responsiva */
+	font-size:1em; /* 1 em =16px */
+}
+
+#main{
+	max-width: 1024px;
+	background-color: #f20202;
+	margin: 0 auto; /*CENTRALIZAR A DIV*/
+}
+
+/*********** TRATAMENTI RESPONSIVO ***********/
+
+img{
+	max-width: 100% /* todas as imagens do site ficam responsivas*/
+}
