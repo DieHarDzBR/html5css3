@@ -32,7 +32,7 @@ body{
 
 
 #destaque{
-	width: 500px;
+	max-width: 500px;
 	text-align: center;
 }
 
@@ -67,6 +67,7 @@ nav{
 	width: 100%;
 	max-width: 1024px;	
 	position: absolute;
+	z-index: 3;
 }
 
 nav ul{
@@ -74,9 +75,6 @@ nav ul{
 	padding: 0px;
 	margin: 0px;
 	width: 100%;
-	
-	
-
 }
 
 nav > ul > li{
@@ -132,7 +130,40 @@ nav li:hover ul{
 .Fixar{
 	position: fixed;
 	top: 0;
-	z-index: 3;
+	
+}
+
+/******* FORMULARIO DE CONTATO********/
+#contato{
+	padding-top: 80px;
+	width: 70%;
+	margin:0 auto;
+}
+
+#contato input[type=text]{
+	width: 100%;
+	padding: 10px;
+	border-radius: 10px;
+	margin-bottom: 10px;
+	border:3px solid #413060;
+}
+
+#contato textarea{
+	width: 100%;
+	padding: 10px 10px 40px 10px;
+	border-radius: 10px;
+	margin-bottom: 20px;
+	border:3px solid #413060;
+	resize: none;
+}
+
+#contato input[type=submit]{
+	background-color: #00ffff;
+	border-radius: 5px;
+	border: 1px solid #000;
+	width: 20%;
+	height: 40px;
+	border: 3px solid #000;
 }
 
 /************ Rodapé **************/
@@ -163,6 +194,10 @@ img {
 	body{
 		margin: 0px;
 	}
+	
+	#destaque img{
+		max-width: 60%;
+	}
 
 	#main{
 		margin: 0px;
@@ -182,7 +217,7 @@ img {
 	/********** menu **********/
 	.Mobile{
 		display: block;
-		background-color: #e15a1f;
+		background-color: #00ffff;
 		color: #ffffff;
 		text-decoration: none;
 		padding: 15px;
@@ -212,7 +247,7 @@ img {
 	}
 
 	nav li ul li a{
-		background-color: #cf5629;
+		background-color: #00ffff;
 		padding-left: 40px;
 	}
 
