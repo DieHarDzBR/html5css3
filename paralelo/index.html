@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venda</title>
+    <style>
+    
+    *{
+        margin: 0px;
+        padding: 0px;
+    }
+    form{
+        width: 100%;
+        padding: 1%;
+        margin: 0px auto;
+        background-color: white;
+        box-shadow: 5px 5px 10px #333;
+    }
+
+    label{
+        font-family: arial;
+        font-weight: bold;
+        display: block;
+    }
+
+    input, textarea{
+        display:block;
+        margin-bottom: 1%;
+    }
+    input[type=text]{
+        padding: 10px;
+        border-radius: 30px;
+        width: 15%;
+        text-align: center;
+    }
+    textarea{
+        width: 95%;
+        height: 180px;
+        padding-right: 0px;
+    }
+    button{
+        width: 200px;
+        height: 200px;
+        border: 0px;
+        background-color: rgb(255,0,0);
+        color:rgb(255,255,255);
+        border-radius: 100px;
+        transition: ease 0.5s;  
+    }
+    button:hover{
+        border-radius: 0px;
+        background-color: rgb(100,0,0);
+        cursor:pointer;
+    }
+
+    #hamburguer{
+    	color: #00aaf9;
+    }
+
+    #carnes{
+    	color: #9f02f4;
+
+    }
+
+    #acompanhamentos{
+        color: #f9ab02;
+    }
+
+    #bebidas{
+        color: #02ef22;
+    }
+
+    #condimentos{
+        color: #ff0000;
+    }
+    </style>
+    <script type = "text/javascript" src="primeiro.js"></script>
+    <script type="text/javascript">
+    function calcular(){
+        var carnelanche, queijolanche, tomatelanche, cebolalanche, alfacelanche;
+        var hamburguer = document.getElementById("hamburguer").value;
+        var carne = document.getElementById("carne").value;
+        var panceta = document.getElementById("panceta").value;
+        var bacon = document.getElementById("bacon").value;
+        var queijo = document.getElementById("queijo").value;
+        var tomate = document.getElementById("tomate").value;
+        var cebola = document.getElementById("cebola").value;
+        var alface = document.getElementById("alface").value;
+        var refri = document.getElementById("refri").value;
+        var cerveja = document.getElementById("cerveja").value;
+        var qtdcerveja = document.getElementById("qtdcerveja").value;
+        var katchup = document.getElementById("katchup").value;
+        var maionese = document.getElementById("maionese").value;
+        var mostarda = document.getElementById("mostarda").value;
+        var sd = document.getElementById("saida");
+
+        
+        sd.innerHTML = "O valor total é: R$ "
+        sd.innerHTML += jurosComposto(vp, tx, pr).toLocaleString('pt-br');
+        sd.innerHTML += "O valor das carnes é: R$ ";
+        sd.innerHTML += (jurosComposto(vp, tx, pr)/pr).toLocaleString('pt-br');
+        sd.innerHTML += "O valor das bebidas é: R$ ";
+        sd.innerHTML += (jurosComposto(vp, tx, pr)/pr).toLocaleString('pt-br');
+        sd.innerHTML += "O valor dos condimentos é: R$ ";
+        sd.innerHTML += (jurosComposto(vp, tx, pr)/pr).toLocaleString('pt-br');
+
+    }
+
+    </script>
+
+</head>
+<body>
+    <h1><center>Calculadora De Hamburguer</center></h1>
+    <hr>
+    <form action="" onsubmit="return false;">
+
+    	<div id="hamburguer">
+
+    	   <label>Quantos Hamburgueres?</label>
+            <input type="number" id="hamburguer" min="0" max="99" step="1" value="0">
+
+		</div>
+
+		<div id = "carnes">
+            <label>Valor Carne</label>
+            <input type="text" id="carne" required>
+
+            <label>Valor Panceta</label>
+            <input type="text" id="panceta" required>
+
+            <label>Valor Bacon</label>
+            <input type="text" id="bacon">
+
+
+        </div>
+
+        <div id = "acompanhamentos"> 
+            <label>Valor 100gr. Queijo</label>
+            <input type="text" id="queijo">
+
+            <label>Valor KG. Tomate</label>
+            <input type="text" id="tomate">
+
+            <label>Valor KG. Cebola</label>
+            <input type="text" id="cebola">
+
+            <label>Valor Und. Alface</label>
+            <input type="text" id="alface">
+
+        </div>
+
+        <div id = "bebidas">
+
+            <label>Valor Refri</label>
+            <input type="text" id="refri">
+
+            <label>Valor cerveja</label>
+            <input type="text" id="cerveja">
+
+            <label>Quantas Cervejas?</label>
+            <input type="number" id="qtdcerveja" min="0" max="99" step="1" value="0">
+
+		</div>
+        
+        <div id = "condimentos">
+
+            <label>Valor Katchup</label>
+            <input type="text" id="katchup">
+       
+            <label>Valor Maionese</label>
+            <input type="text" id="maionese">
+
+            <label>Valor Mostarda</label>
+            <input type="text" id="mostarda">
+        
+        </div>
+
+        <textarea id="saida"></textarea>
+        <button onclick="calcular();">CALCULAR</button>
+    </form>
+</body>
+</html>
