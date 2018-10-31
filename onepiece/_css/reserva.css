@@ -1,0 +1,203 @@
+﻿/**
+* @author DieHarDz
+*@author Smarsi
+* Data 11/10/2018
+*/
+
+
+
+
+#cabeca{
+    top: 0;
+    margin: -10px;
+    background-color: #252323;
+    height: 120px;
+    width: 120%;
+    position: fixed;
+    z-index: 99;
+}
+
+#cabeca img{
+    margin-left: 10%;
+    margin-top: 0.6%;
+}
+
+#lupa{
+    margin-left: 88%;
+    margin-top: -13%;
+    position: fixed;
+    z-index: 999;
+}
+
+#lupa img{
+
+    margin-left: -109%;
+    margin-top: -2%;
+}
+
+ /* #fundao {
+    width:100%;
+    height:1%;
+    padding: 0px;
+    border-radius: 80px;
+    border: 35px solid;
+    border-color:000;
+    background-color: #ff0000;
+    }
+
+    */
+
+
+
+
+/* MENU */
+
+
+nav{ ''''''''''''''''
+    width: 100%;
+    float: left;
+}
+
+nav ul{ ''''''''''''''''''''''''
+    list-style: none;
+	padding: 0px;
+    margin: 0px;
+}
+
+nav>ul>li{ ''''''''''''''''''''''''''''
+    float: left;
+    display: inline-block;
+}
+
+nav li ul{ ''''''''''''''''
+    display: none;
+}
+
+nav li:hover ul{ ''''''''''
+    display: block;
+    position: absolute;
+    z-index: 100;
+}
+
+nav ul li a{ ''''''''''''''''''''
+    text-decoration: none;
+    color: #1c9aee;
+    padding: 5px 15px 10px 15px;
+    display: block;
+    text-transform:uppercase;
+}
+
+nav ul li a:hover{
+    transform: scaleX(1);
+}
+
+
+
+
+
+.Submenu{
+    overflow: hidden;
+}
+
+
+
+/*#menu2{
+	width: 100%;
+    height: 28px;
+    text-decoration: #8cbfe7;
+    font: 12px sans-serif center;
+    float: right;
+    transition: all 2s;
+    
+  
+    
+}
+
+nav #menu2{
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+    
+}
+
+#menu2 li{
+    float: right;
+    text-align: center;
+}
+
+#menu2 li a{
+	color: #ffff00;
+	text-decoration: none;
+	padding: 5px;
+    display: block; /* Transformar em bloco "clicável" */
+    }
+
+#menu2 li a:hover{
+	color: #8cbfe7;	
+	border-bottom:#8cbfe7 2px solid;
+	transition: all 0.5s;
+}
+
+
+
+/* CORPO */
+body{
+    margin-top: 175px;
+    font-family: sans-serif;
+    background: url("../.png") right bottom repeat,url("../agoravai.png");
+    background-size: 100%;
+    background-attachment: fixed;
+    font-family: 'Chelsea Market', cursive;
+    background-size: 100%;
+    position: absolute;
+    
+}
+header{
+    background: rgba(0, 0, 0, .8);
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-family: arial;
+    font-size: 15pt;
+    margin-bottom: 2%;
+    padding: 2% 0;
+    position: fixed;
+    width: 100%;
+    display: inline-block;
+    z-index: 10000;
+}
+
+.imagem1{
+    position: relative;
+    float: top;
+    width: 100%;
+}
+
+.content{ /* Txt img1 */
+    position: absolute;
+    z-index: 5;
+    float: inherit;
+    color: #fff;
+    margin-left: 30%;
+    margin-top: 3%;
+}
+footer{
+    background-attachment: fixed;
+    background-color: black;
+}
+
+@media screen and (max-width: 480px){
+	body{
+		margin: 0px;
+	}
+
+	/*********** MENU ***************/
+	.Mobile{
+	display: block;
+	color: #ffffff;
+	text-decoration: none;
+	padding: 15px;
+	}
+    
+
+
+

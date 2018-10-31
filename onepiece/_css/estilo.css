@@ -1,0 +1,254 @@
+/**
+* @author DieHarDz
+* Data 11/10/2018
+*/
+
+
+/* CORPO */
+body{
+    margin-top: 17%;
+    font-family: sans-serif;
+    background: url("../_imagens/background.png");
+    background-attachment: fixed;
+    background-size: 100% ;
+    text-align: center;
+    font-family: 'Chelsea Market', cursive;
+    
+
+}
+    #main{
+    background-color:rgba(229, 229, 229, .8);
+	border-radius: 50px;
+    box-shadow: 10px 0px 50px 10px #FFF;
+    position: relative;
+    word-wrap: break-word;
+    width: 100%;
+    max-width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    padding-left: 4%;
+    padding-right: 4%;
+    padding-bottom: 4%;
+}
+
+#main p{
+    padding-top: 160px;
+}
+.banner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2.5%;
+    
+
+}
+.imagem1{
+    position: absolute;
+    left: 0;
+    width: 100%;
+    filter: opacity(80%);
+    border-radius: 30px;
+    box-shadow: 10px 0px 50px 10px #000;
+}
+
+.content{ /* Txt img1 */
+    z-index: 5;
+    padding-top: 0%;
+    color: #000;
+
+}
+
+.Mobile{
+    display: none;
+ }
+
+
+ .Fixar{
+    position: fixed;
+    top: 0;
+    z-index: 3;
+}
+
+
+
+
+#cabeca{
+    top: 0;
+    left: 0;
+    margin: -10px;
+    background-color: #252323;
+    height: 60px;
+    width: 120%;
+    position: fixed;
+    z-index: 10;
+}
+
+#cabeca img{
+    margin-left: -70%;
+    margin-top: 1.5%;
+    width: 6%;
+}
+
+
+/* MENU */
+
+
+nav ul{
+	list-style: none;
+	padding: 0px;
+    margin: 0px;
+    
+    
+}
+
+
+
+
+nav{
+    width: 100%;
+    float: left;
+    
+}
+
+
+nav li ul{
+    display: none; /* Esconder um conteúdo */
+    font-size: 0.8rem;
+    margin-left: 20px;
+    padding-top: 0;
+ 
+}
+
+nav li:hover ul{
+	display: block;
+    position: absolute;
+    z-index: 100; 
+    
+}
+
+nav>ul {
+	list-style: none;
+    top:50px;
+    position: fixed;
+    background-color:#eaeaeb;
+    height: 40px;
+    width: 100%;
+    left: 0;
+    font-size: 1.1rem;
+    padding: 25px;
+    text-align: center;
+    z-index: 100;
+    margin: 0;
+    display:inline-block;
+    text-transform:uppercase;
+    padding-top: 10px;
+    background-color:rgba(229, 229, 229, .9);
+    box-shadow: 5px 0px 35px 10px #000;
+
+
+}
+
+
+
+nav>ul>li{
+    display: inline-block;
+    
+}
+
+nav ul li a{
+	text-decoration: none;
+	color: #1c9aee;
+    padding: 0px 10px 10px 10px;
+    display: block;
+    text-transform:uppercase;
+    
+
+}
+
+nav ul li a:hover{
+    transform: scaleX(1);
+    color: #000;
+   
+}
+
+
+nav ul li a:after {
+    display:block;
+    content: '';
+    border-bottom: solid 3px #000;  
+    transform: scaleX(0);  
+    transition: transform 150ms ease-in-out;
+    
+    
+
+}
+
+
+nav ul li a:hover:after {
+    
+    transform: scaleX(1);  
+
+}
+
+nav li ul li{
+    float: left;
+}
+
+/* Responsividade */
+@media screen and (max-width: 480px){
+    body{
+        margin: 0px;
+    }
+
+    .imagem1{
+        margin-top: 55px;
+
+    }
+
+    /** MENU **/
+    @media screen and (max-width: 480px){
+    body{
+        margin: 0px;
+    }
+
+    /** MENU **/
+    .Mobile{
+    display: block;
+    position: fixed;
+    padding: 15px;
+    z-index: 60000;
+    margin-top: 70px;
+    color: white;
+    text-decoration: none;
+    }
+
+    .imagem1{
+    margin-top: 10%;
+    }
+
+    nav>ul>li{
+        float: none;
+    }
+    nav ul{
+        width: 100%;
+        display: none;
+        margin-top: 15%;
+   
+    }
+
+    nav ul li a{
+    
+        padding: 12px;
+        text-align: left;
+        font-size: 0.5rem;
+    }
+
+    nav ul li a:hover{
+        transition: all 0s; /* Remover efeito de transição */
+    }
+
+    nav li ul li{
+        background-color: rgba(64,57,232,.6);
+    }
+}
+}
