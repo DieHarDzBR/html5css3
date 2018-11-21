@@ -1,0 +1,775 @@
+/*
+* @author Diogo Diehard
+*/
+
+/************* Importando fonte **************/
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+/************* Principal **************/
+body{
+	margin-top: 12%;
+	font-family: 'Open Sans', sans-serif;
+	background: url("../_imagens/background.png");
+    background-attachment: fixed;
+    background-size: 100%;
+	font-size: 1em; /*1 em = 16px */
+	font-family: 'Chelsea Market', cursive;
+	text-align:center;
+}   
+
+#main{
+	max-width: 100%;
+	position: relative;
+	width: 90%;
+	margin: 0 auto; /*centralizar a div */
+	 /*box model*/
+	background-color: rgba(229, 229, 229, .8);
+	border-radius: 50px;
+	box-shadow: 10px 0px 50px 10px #FFF;
+}
+#blackbar{
+    top: 0;
+    left: 0;
+    margin: -10px;
+    background-color: #252323;
+    height: 60px;
+    width: 120%;
+    position: fixed;
+    z-index: 10;
+}
+
+#blackbar img{
+    float: left;
+    margin-left: 15%;
+    margin-top: 1%;
+    width: 4%;
+}
+
+.banner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2.5%;
+    
+
+}
+.imagem1{
+    position: absolute;
+    left: 0;
+    width: 100%;
+    filter: opacity(80%);
+    border-radius: 30px;
+    box-shadow: 10px 0px 50px 10px #000;
+}
+
+.content{ /* Txt img1 */
+    z-index: 5;
+    padding-top: 0%;
+	color: #fff;
+	text-shadow:#000 1px -1px, #000 -1px 2px, #000 1px 1px, #000 -1px -1px;
+
+}
+
+#destaque{
+    max-width: 1024px;
+    height: 500px;
+	padding-top: 20px;
+  	padding-bottom: 20px;
+}
+
+
+.blocos{
+	width: 30%;
+	background-color: rgba(229, 229, 229, .2);
+	float:right;
+	margin-left: 1.75%;
+	border: 1px solid #000;
+	text-align: center;
+	position: relative; /*posicionamento do botao*/
+	margin: .4%;
+
+}
+.blocos p{
+	padding: 0px 10px 0px 10px;
+	text-align: left;
+}
+
+.blocos a{
+	width: 80px;
+	padding: 5px 0px 5px 0px;
+	color: #1c9aee;
+	text-decoration: none;
+	font-size: 0.875em;
+	position: relative;
+	right: 5px;
+	bottom: 5px;
+}
+
+.blocos h2{
+	font-size: 2em;
+}
+
+
+
+
+/************** Cabeçalho ***************/
+header{
+	width: 100%;
+	height: 60px;
+	/*background-color: #ffff00; /*dica para ajustar elementos*/
+	margin-bottom: 0px;
+}
+
+header img{
+	
+	margin-top: 10px;
+	margin-left: 10px;
+}
+
+#banner img{
+	margin-top: 50px;
+}
+
+#github img{
+width: 100px;
+}
+
+#bg1{
+	max-width: 100%;
+}
+/************** Menu **************/
+
+/* MENU */
+
+
+nav ul{
+	list-style: none;
+	padding: 0px;
+    margin: 0px;
+    
+    
+}
+
+
+
+
+nav{
+    width: 100%;
+    float: left;
+    
+}
+
+
+nav li ul{
+    display: none; /* Esconder um conteúdo */
+    font-size: 0.8rem;
+    margin-left: 20px;
+    padding-top: 0;
+ 
+}
+
+nav li:hover ul{
+	display: block;
+    position: absolute;
+    z-index: 100; 
+    
+}
+
+nav>ul {
+	list-style: none;
+    top:50px;
+    position: fixed;
+    background-color:#eaeaeb;
+    height: 40px;
+    width: 100%;
+    left: 0;
+    font-size: 1.1rem;
+    padding: 25px;
+    text-align: center;
+    z-index: 100;
+    margin: 0;
+    display:inline-block;
+    text-transform:uppercase;
+    padding-top: 10px;
+    background-color:rgba(229, 229, 229, .9);
+    box-shadow: 5px 0px 35px 10px #000;
+
+
+}
+
+
+
+nav>ul>li{
+    display: inline-block;
+    
+}
+
+nav ul li a{
+	text-decoration: none;
+	color: #1c9aee;
+    padding: 0px 10px 10px 10px;
+    display: block;
+    text-transform:uppercase;
+    
+
+}
+
+nav ul li a:hover{
+    transform: scaleX(1);
+    color: #000;
+   
+}
+
+
+nav ul li a:after {
+    display:block;
+    content: '';
+    border-bottom: solid 3px #000;  
+    transform: scaleX(0);  
+    transition: transform 150ms ease-in-out;
+    
+    
+
+}
+
+
+nav ul li a:hover:after {
+    
+    transform: scaleX(1);  
+
+}
+
+nav li ul li{
+    float: left;
+}
+/* Desenhando um triângulo no css */
+.Detalhes:after{ /*atributo after (após o conteúdo)*/
+	content:''; /* content: insere um conteúdo no css */
+	border: 5px solid transparent;
+	/*border-left-color: #ff0000;*/
+	/*border-right-color: #00ff00;*/
+	/*border-bottom-color: #0000ff;*/
+	border-top-color: #e8e8e8;
+	/* alinhamento */
+	display: inline-block;
+	vertical-align: middle;	
+}
+
+.Mobile{
+	display: none;
+}
+
+/* Classe usada pelo JS para fixar o menu */
+.Fixar{
+	position: fixed;
+	top: 0;
+	
+}
+
+/******* FORMULARIO DE CONTATO********/
+#contato{
+	padding-top: 80px;
+	width: 70%;
+	margin:0 auto;
+}
+
+#contato input[type=text]{
+	width: 100%;
+	padding: 10px;
+	border-radius: 10px;
+	margin-bottom: 10px;
+	border:3px solid #413060;
+}
+
+#contato textarea{
+	width: 100%;
+	padding: 10px 10px 40px 10px;
+	border-radius: 10px;
+	margin-bottom: 20px;
+	border:3px solid #413060;
+	resize: none;
+}
+
+#contato input[type=submit]{
+	background-color: #00ffff;
+	border-radius: 5px;
+	border: 1px solid #000;
+	width: 20%;
+	height: 40px;
+	border: 3px solid #000;
+}
+
+/************ Rodapé **************/
+footer{
+	width: 100%;
+	background-color: #1c9aee;
+	margin-top: 50px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	text-align: center;
+	color: #000;
+	border-radius: 20px;
+	font-size: 0.75em;	
+}
+
+footer img{
+	width: 2%;
+	padding-left: 2%;
+}
+
+/*********** Tratamento responsivo *************/
+
+/******* imagens do site *******/
+img {
+	max-width: 100%; /* todas as imagens do site ficam responsivas */
+}
+
+/************* 1°Ponto de Quebra *************/
+@media screen and (max-width: 1026px){
+
+	body{
+		margin-top: 180px;
+		padding-left: 15px;
+		width: 100%;
+		max-width: 1000px;
+		font-size: 0.9em;
+		position: absolute;
+	}
+
+	.blocos{
+		width: 50%;
+		background-color: rgba(229, 229, 229, .2);
+		margin-left: 100px;
+		float:none;
+		border: 1px solid #000;
+		text-align: center;
+		margin: 0 auto;
+		position: static;
+		margin-top: 10px;
+	}
+	
+	
+	.blocos h2{
+		font-size: 2em;
+	}
+	
+
+	
+
+	#destaque{
+		height: 1000px;
+	}
+
+	
+
+	.carousel{
+		float: right;
+		margin-right: 100px;
+	}
+	
+	
+	
+	#destaque img{
+		max-width: 70%;
+	}
+
+	#main{
+		margin: 0px;
+	}
+
+	nav>ul{
+		width: 100%;
+		max-width: 10240px;
+	}
+	#blackbar{
+		height: 12.5%;
+	}
+
+	#blackbar img{
+		width: 7%;
+		margin-top: 25px;
+		margin-left: 200px;
+	}
+
+	nav ul{
+		font-size: 1.1em;
+		height: 5.5%;
+	}
+
+	nav li ul{
+		font-size: .7em;
+	}
+
+	footer img{
+		width: 3%;
+		padding-left: 5%;
+	}
+
+	header img{
+		width: 15%;
+	}
+	
+
+}
+
+
+
+/* fim do 1°ponto */
+
+
+/************* 1°Ponto de Quebra *************/
+@media screen and (max-width: 768px){
+
+	body{
+		margin-top: 150px;
+		margin-left: 30px;
+		width: 100%;
+		max-width: 550px;
+		font-size: 0.8em;
+	}
+
+	.blocos{
+		margin-right: 13px;
+	}
+
+	.bloco1{
+		margin: 15px;
+	}
+
+	#destaque{
+		height: 300px;
+	}
+
+	
+
+	.carousel{
+		float: right;
+		margin-right: 100px;
+	}
+	
+	
+	
+	#destaque img{
+		max-width: 70%;
+	}
+
+	#main{
+		margin: 0px;
+	}
+
+	nav>ul{
+		width: 100%;
+		max-width: 700px;
+	}
+	#blackbar{
+		height: 7%;
+	}
+
+	#blackbar img{
+		width: 8%;
+		margin-top: 20px;
+		margin-left: 200px;
+	}
+	nav ul{
+		font-size: 1.1em;
+		height: 5.5%;
+	}
+
+	nav li ul{
+		font-size: .7em;
+	}
+
+	footer img{
+		width: 3%;
+		padding-left: 5%;
+	}
+
+	header img{
+		width: 15%;
+	}
+	
+
+}
+
+
+
+/* fim do 1°ponto */
+/************* 2°Ponto de Quebra *************/
+@media screen and (max-width: 1058px){
+	body{
+		margin-left: 5px;
+		padding-right: 6px;
+		width: 100%;
+		max-width: 1020px;
+
+	}
+	
+	#destaque img{
+		max-width: 60%;
+	}
+
+	#main{
+		margin: 0px;
+	}
+
+/* fim do 2°ponto */
+}
+/************* 3°Ponto de Quebra *************/
+@media screen and (max-width: 985px){
+	body{
+		margin-left: 10px;
+		padding-right: 16px;
+		width: 100%;
+		max-width: 945px;
+	}
+	
+	nav{
+		width: 100%;
+		max-width: 950px;
+	}
+	#destaque img{
+		max-width: 70%;
+	}
+
+	#main{
+		margin: 0px;
+	}
+
+/* fim do 3°ponto */
+}
+
+/************* 4°Ponto de Quebra *************/
+@media screen and (max-width: 950px){
+	body{
+		margin-left: 10px; /*ok*/
+		padding-right: 12px;
+		width: 100%;
+		max-width: 910px;
+	}
+	
+	nav{
+		width: 100%;
+		max-width: 915px;
+	}
+	#destaque img{
+		max-width: 70%;
+	}
+
+	#main{
+		margin: 0px;
+	}
+
+/* fim do 4°ponto */
+}
+
+/************* 5°Ponto de Quebra *************/
+@media screen and (max-width: 768px){
+	body{
+		margin-left: 14px;
+		padding-right: 10px;
+		width: 100%;
+		max-width: 715px;
+	}
+	
+	nav{
+		width: 100%;
+		max-width: 718px;
+	}
+	#destaque img{
+		max-width: 70%;
+	}
+
+	#main{
+		margin: 0px;
+	}
+
+/* fim do 5°ponto */
+}
+/************* 6°Ponto de Quebra *************/
+@media screen and (max-width: 600px){
+	body{
+		margin-left: 6px;
+		padding-right: 16px;
+		width: 100%;
+		max-width: 570px;
+	}
+	
+	nav{
+		width: 100%;
+		max-width: 572px;
+	}
+	#destaque img{
+		max-width: 70%;
+	}
+
+	#main{
+		margin: 0px;
+	}
+
+/* fim do 6°ponto */
+}
+
+
+/************* Smartphone ***************/
+
+@media screen and (max-width: 482px){
+	
+	/******** principal ********/
+
+	body{
+		margin-top: 50px;
+		padding-left: 0px;
+		padding-right: 0px;
+		margin-right: 0px;
+		margin-left: 0px;
+		width: 100%;
+		max-width: 720px;
+		font-size: .7em;
+	}
+
+	.bloco2{
+		margin: 15px;
+	}
+
+	.bloco1{
+		margin: 15px;
+	}
+
+	
+
+	.carousel{
+		float: right;
+		margin-right: 100px;
+	}
+
+	#github{
+		width: 50%;
+	}
+	
+	
+	
+	#destaque img{
+		max-width: 40%;
+	}
+
+	#main{
+		margin: 0px;
+	}
+
+	nav>ul{
+		width: 100%;
+		max-width: 430px;
+		
+	}
+	#blackbar{
+		height: 7%;
+	}
+
+	#blackbar img{
+		width: 8%;
+		margin-top: 20px;
+		margin-left: 200px;
+	}
+
+	nav ul{
+		font-size: 1.1em;
+		height: 5.5%;
+	}
+
+	nav li ul{
+		font-size: .7em;
+	}
+
+	footer img{
+		width: 3%;
+		padding-left: 5%;
+	}
+
+	header img{
+		width: 15%;
+	}
+
+	.banner h1{
+		font-size: 1em;
+		float: left;
+	}
+	
+
+
+	/********** cabeçalho *********/
+	header{
+		margin-bottom: 0px;
+		text-align: center; /*centraliza tudo*/
+	}
+	
+
+	
+	/********** menu **********/
+	.Mobile{
+		display: block;
+		background-color: rgba(229, 229, 229, .5);
+		color: #ffffff;
+		text-decoration: none;
+		padding: 15px;
+		
+	}
+	.banner{
+		margin-top: 50px;
+	}
+/* 
+	nav > ul > li{
+		float: none;
+		width: 100%;
+	} */
+
+	nav ul{
+		width: 100%;
+		display: none;
+	}
+	
+	/* ajuste */
+	nav ul li a{
+		text-align: left;
+	}
+
+	nav ul li a:hover{
+		transition: all 0s; /*remover efeito de transição*/		
+	}
+
+	nav li ul li{
+		background-color: #044364;
+	}
+
+
+
+	/* IMPORTANTE para UX no dispositivo mobile,
+	não exibir o 2º nivel do menu enquanto conteúdo
+	não for clicado	*/
+	
+	nav li:hover ul{
+		display: none;
+	}
+
+	/*** heading ***/
+
+	
+	#heading h2{
+		font-size: 1.2em;
+	}
+
+	/*** blocos ***/
+	#destaque{
+		max-width: 315px;
+		height: 800px;
+		margin: 0 auto;
+	}
+
+	.blocos{
+		width: 100%;
+		float: right;
+		margin-bottom: 20px;
+	}
+	
+
+	
+}
